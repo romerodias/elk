@@ -6,11 +6,11 @@
 On Logstash
 
 ```
- {
-    tcp {
-      port => 9000
-    }
- }
+input {
+  tcp {
+    port => 9000
+  }
+}
 ```
 
 On client side
