@@ -1,10 +1,8 @@
 # Docker Compose for ELK - Elasticsearch, Logstash and Kibana
 
+### Send log do Logstash by Command Line
 
-
-
-## Send log do Logstash by Command Line
-On Logstash
+On logstash configuration: ./config-dir:/config-dir
 ```
 input {
   tcp {
@@ -13,7 +11,7 @@ input {
 }
 ```
 
-On client side
+On client side, send a teste to logstash on tcp port 
 ```
-echo -n '{"teste":"ok"}' | nc LOGSTASH_IP LOGSTASH_PORT
+echo -n '{"teste":"ok"}' | nc [LOGSTASH_IP] [LOGSTASH_PORT]
 ```
